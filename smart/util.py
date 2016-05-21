@@ -30,7 +30,7 @@ def cost_time(arg):
 
     """
     def decorator(func):
-        @functools.wraps(func) 
+        @functools.wraps(func)
         def wrap(*args, **kwargs):
             start = time.time()
             output = func(*args, **kwargs)
@@ -50,4 +50,8 @@ def cost_time(arg):
         else:
             raise ValueError("'{}' object has no method 'write'.".format(type(handler).__name__))
 
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
 
